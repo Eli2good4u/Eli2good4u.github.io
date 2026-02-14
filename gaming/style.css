@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Body */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #5a2d0c, #8b3e15, #c56b2d, #e89c3f); /* Autumn warm tones */
+  color: white;
+  overflow: hidden;
+}
+
+/* Back Button */
+.back-button {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  z-index: 5;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+.back-button:hover {
+  background: rgba(255,200,150,0.35);
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 0 15px rgba(255,200,150,0.6);
+}
+
+/* Iframe Container */
+.iframe-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1000px;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 16px;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(5px);
+}
+
+/* Button Bar */
+.button-bar {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  z-index: 3;
+}
+
+.button-bar button {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.25s, background 0.3s, box-shadow 0.3s;
+}
+.button-bar button:hover {
+  background: rgba(255,140,0,0.25);
+  transform: scale(1.15);
+  box-shadow: 0 0 12px rgba(255,140,0,0.6);
+}
+
+.button-bar button img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1); /* make icons white */
+  transition: filter 0.3s;
+}
+.button-bar button:hover img {
+  filter: drop-shadow(0 0 6px orange);
+}

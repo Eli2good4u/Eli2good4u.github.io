@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaf</title>
+  <link rel="shortcut icon" href="images/leaf.png" type="image/x-icon">
+<link rel="stylesheet" href="/gaming/style.css">
+</head>
+<body>
+  <!-- Back Button -->
+  <button class="back-button" onclick="window.location.href='/index.html'">⬅ Back</button>
+
+  <!-- Iframe -->
+  <div class="iframe-container">
+    <iframe id="game-iframe" src="/leafy/ngon/index.html"></iframe>
+    <div class="button-bar">
+      <button onclick="window.location.reload()" title="Reload">
+        <img src="/images/refresh-svgrepo-com.svg">
+      </button>
+      <button onclick="makeIframeFullscreen()" title="Fullscreen">
+        <img src="/images/arrow-increase-svgrepo-com.svg">
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function makeIframeFullscreen() {
+      const iframe = document.getElementById('game-iframe');
+      if (iframe.requestFullscreen) iframe.requestFullscreen();
+      else if (iframe.webkitRequestFullscreen) iframe.webkitRequestFullscreen();
+      else if (iframe.mozRequestFullScreen) iframe.mozRequestFullScreen();
+      else if (iframe.msRequestFullscreen) iframe.msRequestFullscreen();
+    }
+  </script>
+</body>
+</html>
